@@ -17,12 +17,14 @@ Route::get('/', function () {
     $links = config('store.someLinks');
     $linkHeader = config('store.linkHeader');
     $comics = config('store.comics');
-    return view('welcome', compact('links','linkHeader','comics'));
+    $icons = config('store.icons');
+    return view('welcome', compact('links','linkHeader','comics','icons'));
 });
 
 Route::get('/otherpage', function () {
     $links = config('store.someLinks');
     $linkHeader = config('store.linkHeader');
     $comics = config('store.comics');
-    return view('other', compact('links','linkHeader','comics'));
+    $icons = config('store.icons');
+    return view('other', compact('links','linkHeader','comics','icons'));
 });

@@ -15,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $links = config('store.someLinks');
-    return view('welcome', compact('links'));
+    $linkHeader = config('store.linkHeader');
+    $comics = config('store.comics');
+    return view('welcome', compact('links','linkHeader','comics'));
 });
 
 Route::get('/otherpage', function () {
     $links = config('store.someLinks');
-    return view('other', compact('links'));
+    $linkHeader = config('store.linkHeader');
+    $comics = config('store.comics');
+    return view('other', compact('links','linkHeader','comics'));
 });
